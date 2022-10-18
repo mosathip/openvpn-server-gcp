@@ -1,16 +1,16 @@
-# terraform
+# Terraform
 
-## requirements
+## Requirements
 
 - Google Cloud Platform Project with linked Billing Account
 - Google Cloud Platform Project access for create service account
 
-## prepare configuration
+## Prepare Configuration
 
 - create file my-var.tfvars likes example.tfvars
 - edit my-var.tfvars
 
-## install terraform cli
+## Install Terraform cli
 
 For macOS
 
@@ -18,13 +18,13 @@ For macOS
 brew install terraform
 ```
 
-## first run
+## First Run
 
 ```sh
 terraform init
 ```
 
-## create vm with terraform
+## Create VM with Terraform
 
 dry run
 
@@ -32,13 +32,13 @@ dry run
 terrform plan --var-file my-var.tfvars
 ```
 
+exec
+
 ```sh
-terraform apply --var-file my-var.tfvars
+terraform apply -auto-approve --var-file my-var.tfvars 
 ```
 
-## clean up vm with terraform
-
-dry run
+## Cleanup VM with Terraform
 
 ```sh
 terrform destroy --var-file my-var.tfvars
