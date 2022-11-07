@@ -35,11 +35,11 @@ terrform plan --var-file my-var.tfvars
 exec
 
 ```sh
-terraform apply -auto-approve --var-file my-var.tfvars 
+terraform apply -auto-approve --var-file my-var.tfvars
 ```
 
 ## Cleanup VM with Terraform
 
 ```sh
-terrform destroy --var-file my-var.tfvars
+terraform destroy --var-file my-var.tfvars
 ```
