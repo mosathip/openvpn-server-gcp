@@ -45,20 +45,29 @@ resource "google_compute_instance" "default" {
   EOT
 }
 
-resource "google_compute_firewall" "rules" {
-  name        = "my-firewall-rule"
-  network     = "default"
-  description = "Creates firewall rule targeting tagged instances"
+resource "google_compute_firewall" "default" {
+  name          = "${var.instance_name}-web"
+  network       = "default"
+  description   = "allow access vpn server"
+
+  priority      = 1000
+  direction     = "INGRESS"
 
   allow {
-    protocol  = "tcp"
-    ports     = ["943"]
+    protocol    = "tcp"
+    ports       = ["943", "443"]
+  }
+
+  allow {
+    protocol    = "udp"
+    ports       = ["1194"]
   }
 
   source_ranges = [
     "0.0.0.0/0"
   ]
-  target_tags = ["${var.instance_name}-web"]
+
+  target_tags   = ["${var.instance_name}-web"]
 }
 
 resource "google_compute_address" "static" {
