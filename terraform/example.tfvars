@@ -8,5 +8,4 @@ instance_metadata = {
     ## use os login to control root access from iam
     ## need to grant role os login or os login admin
     # enable-oslogin = "TRUE"
-
 }
