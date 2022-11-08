@@ -10,7 +10,7 @@ deploy openvpn server on google cloud platform virtual machine
 - [OpenVPN Connect](https://openvpn.net/vpn-client) client software
 - [Terraform](https://www.terraform.io) command-line interface
 
-## Create Google Cloud VM Instance
+## Google Cloud VM Instance
 
 create [Google Cloud Compute Engine](https://cloud.google.com/compute) with [Terraform](https://www.terraform.io)
 
@@ -52,6 +52,12 @@ terraform -chdir=./terraform plan --var-file my-var.tfvars
 terraform -chdir=./terraform destroy --var-file my-var.tfvars
 ```
 
+### Remote to your server
+
+- go to <https://console.cloud.google.com/compute/instances>
+- Click on SSH button
+- ready for execute your command
+
 ## OpenVPN Access Server
 
 ### Create OpenVPN Account
@@ -66,9 +72,14 @@ terraform -chdir=./terraform destroy --var-file my-var.tfvars
 
 ### Install OpenVPN Access Server
 
-for Ubuntu 22, x86_64, [for other operation system](https://as-portal.openvpn.com/get-access-server)
+switch to root user
 
-run this script as root privilege
+```sh
+  sudo -i
+```
+
+installation command for Ubuntu 22, x86_64 \
+[other operation system](https://as-portal.openvpn.com/get-access-server)
 
 ```sh
 apt update && apt -y install ca-certificates wget net-tools gnupg
