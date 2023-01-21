@@ -39,10 +39,10 @@ resource "google_compute_instance" "default" {
     }
   }
 
-  metadata_startup_script = <<EOT
-    sudo apt update -y;
-    sudo apt upgrade -y;
-  EOT
+  # metadata_startup_script = <<EOT
+  #   sudo apt update -y;
+  #   sudo apt upgrade -y;
+  # EOT
 }
 
 resource "google_compute_firewall" "default" {
