@@ -1,6 +1,7 @@
 # openvpn-server-gcp
 
-deploy openvpn server on google cloud platform virtual machine
+deploy openvpn server on google cloud platform virtual machine \
+using tools based-on MacOS
 
 ## Prerequisite
 
@@ -14,7 +15,7 @@ deploy openvpn server on google cloud platform virtual machine
 
 ## Setup your Mac
 
-### install Homerrew
+### Install Homebrew
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
