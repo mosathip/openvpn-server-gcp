@@ -100,10 +100,12 @@ terraform -chdir=./terraform destroy --var-file my-var.tfvars
 run this command to set variable before run install script
 
 `OPENVPN_SERVER_INSTANCE_NAME` is `instance_name` in my-var.tfvars \
+`OPENVPN_SERVER_PROJECT_ID` is `project_id` in my-var.tfvars \
 `OPENVPN_SERVER_ZONE` is `zone` in my-var.tfvars
 
 ```sh
 export OPENVPN_SERVER_INSTANCE_NAME=openvpn-server
+export OPENVPN_SERVER_PROJECT_ID=project-id
 export OPENVPN_SERVER_ZONE=asia-southeast1-b
 export CURRENT_USERNAME=$(whoami)
 ```
