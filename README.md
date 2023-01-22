@@ -8,7 +8,7 @@ using tools based-on MacOS
 - [Google Cloud](https://cloud.google.com) Project with linked Billing Account
 - [Google Cloud Console](https://console.cloud.google.com) access to project for create service account
 - [Google Cloud CLI](https://cloud.google.com/cli) connect to Google Cloud VM instance with command line interface
-- [OpenVPN](https://openvpn.net) Account for oogin Access Server Portal
+- [OpenVPN](https://openvpn.net) Account for login Access Server Portal
 - [OpenVPN Connect](https://openvpn.net/vpn-client) client software
 - [Terraform](https://www.terraform.io) command-line interface
 
